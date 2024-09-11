@@ -1,9 +1,13 @@
 const canvas = document.getElementById('backgroundCanvas');
 const ctx = canvas.getContext('2d');
 
-// Set canvas dimensions to match the window
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// Function to resize the canvas to fill the screen
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+resizeCanvas(); // Set canvas size on initial load
 
 // Store mouse position
 let mouse = {
@@ -68,16 +72,17 @@ class Particle {
 }
 
 // Initialize particles
-let particlesArray;
+let particlesArray = [];
+
 function init() {
     particlesArray = [];
-    const numberOfParticles = (canvas.width * canvas.height) / 9000;
+    const numberOfParticles = Math.floor((canvas.width * canvas.height) / 9000);
     for (let i = 0; i < numberOfParticles; i++) {
         let size = Math.random() * 3 + 1;
         let x = Math.random() * (canvas.width - size * 2) + size;
         let y = Math.random() * (canvas.height - size * 2) + size;
-        let directionX = Math.random() * 0.5 - 0.25;
-        let directionY = Math.random() * 0.5 - 0.25;
+        let directionX = Math.random() * 0.4 - 0.2;
+        let directionY = Math.random() * 0.4 - 0.2;
         let color = '#00bfff';
 
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
@@ -94,11 +99,10 @@ function animate() {
     });
 }
 
-// Resize canvas when the window is resized
+// Ensure canvas resizes correctly and reinitialize particles
 window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    init();
+    resizeCanvas();  // Resize the canvas to fit the window
+    init();  // Reinitialize particles to fit new canvas size
 });
 
 // Initialize particles and start animation

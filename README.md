@@ -1,2 +1,2 @@
-# datacareanalytics.github.io
-Landing page for Datacare analytics
+# turocrates.github.io
+Landing page for TurocratesAI

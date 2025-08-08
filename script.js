@@ -1,110 +1,62 @@
-const canvas = document.getElementById('backgroundCanvas');
-const ctx = canvas.getContext('2d');
+document.addEventListener('DOMContentLoaded', () => {
 
-// Function to resize the canvas to fill the screen
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
+    // --- Mobile Navigation (Hamburger Menu) ---
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
 
-resizeCanvas(); // Set canvas size on initial load
-
-// Store mouse position
-let mouse = {
-    x: null,
-    y: null,
-    radius: 150 // Interaction radius
-};
-
-// Update mouse position on mouse move
-window.addEventListener('mousemove', (event) => {
-    mouse.x = event.x;
-    mouse.y = event.y;
-});
-
-// Create particles
-class Particle {
-    constructor(x, y, directionX, directionY, size, color) {
-        this.x = x;
-        this.y = y;
-        this.directionX = directionX;
-        this.directionY = directionY;
-        this.size = size;
-        this.color = color;
-    }
-
-    // Draw particle on canvas
-    draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = this.color;
-        ctx.fill();
-    }
-
-    // Update particle position and interaction with mouse
-    update() {
-        // Check if particle is within the mouse radius
-        let dx = mouse.x - this.x;
-        let dy = mouse.y - this.y;
-        let distance = Math.sqrt(dx * dx + dy * dy);
-
-        if (distance < mouse.radius) {
-            // Slowly attract particles to the mouse with subtle movement
-            this.x += dx * 0.02;
-            this.y += dy * 0.02;
-        } else {
-            // Natural particle movement
-            this.x += this.directionX;
-            this.y += this.directionY;
-        }
-
-        // Reverse direction if the particle hits the canvas boundary
-        if (this.x < 0 || this.x > canvas.width) {
-            this.directionX = -this.directionX;
-        }
-        if (this.y < 0 || this.y > canvas.height) {
-            this.directionY = -this.directionY;
-        }
-
-        // Draw the particle
-        this.draw();
-    }
-}
-
-// Initialize particles
-let particlesArray = [];
-
-function init() {
-    particlesArray = [];
-    const numberOfParticles = Math.floor((canvas.width * canvas.height) / 9000);
-    for (let i = 0; i < numberOfParticles; i++) {
-        let size = Math.random() * 3 + 1;
-        let x = Math.random() * (canvas.width - size * 2) + size;
-        let y = Math.random() * (canvas.height - size * 2) + size;
-        let directionX = Math.random() * 0.4 - 0.2;
-        let directionY = Math.random() * 0.4 - 0.2;
-        let color = '#ff3131';
-
-        particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
-    }
-}
-
-// Animation loop
-function animate() {
-    requestAnimationFrame(animate);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    particlesArray.forEach((particle) => {
-        particle.update();
+    // Toggle menu on hamburger click
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
     });
-}
 
-// Ensure canvas resizes correctly and reinitialize particles
-window.addEventListener('resize', () => {
-    resizeCanvas();  // Resize the canvas to fit the window
-    init();  // Reinitialize particles to fit new canvas size
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+
+
+    // --- Smooth Scrolling for Nav Links ---
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // Adjust for fixed header height
+                const headerOffset = document.querySelector('.header').offsetHeight;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+
+    // --- Scroll Transition Observer ---
+    const animatedElements = document.querySelectorAll('.anim-fade-in, .anim-fade-up');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    }, {
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    });
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+
 });
-
-// Initialize particles and start animation
-init();
-animate();

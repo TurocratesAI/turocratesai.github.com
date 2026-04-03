@@ -291,6 +291,17 @@ h4 { font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.75rem; }
     margin-bottom: 0.5rem;
 }
 
+.footer a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--primary-accent);
+}
+
 /* Animation Classes */
 .anim-fade-in, .anim-fade-up {
     opacity: 0;

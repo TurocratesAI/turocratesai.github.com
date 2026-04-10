@@ -1,0 +1,80 @@
+# Turocrates.ai Robots.txt
+# Last Updated: April 9, 2026
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /search/
+Disallow: /search?*
+Disallow: /*.php$
+Disallow: /*.cgi$
+Disallow: /*.inc$
+Disallow: /*.sql$
+Disallow: /*.log$
+Disallow: /*.env$
+Disallow: /*.config$
+Disallow: /*.bak$
+Disallow: /*.old$
+
+# Crawl delay for all bots
+Crawl-delay: 2
+
+# Sitemaps
+Sitemap: https://turocrates.ai/sitemap.xml
+Sitemap: https://turocrates.ai/sitemap-pages.xml
+Sitemap: https://turocrates.ai/sitemap-blog.xml
+
+# Block specific bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 5
+
+User-agent: SemrushBot-SA
+Disallow: /
+
+# Allow Google, Bing, and other major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 2
+
+# Block specific paths
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /logs/
+Disallow: /backup/
+Disallow: /test/
+Disallow: /test-*/
+
+# Allow all other bots with crawl delay
+User-agent: *
+Allow: /
+Crawl-delay: 5
+
+# Sitemap references
+Sitemap: https://turocrates.ai/sitemap.xml
+Sitemap: https://turocrates.ai/sitemap-pages.xml
+Sitemap: https://turocrates.ai/sitemap-blog.xml

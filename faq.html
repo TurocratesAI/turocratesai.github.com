@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Digital Pathology Platform | Turocrates.ai</title>
+    <meta name="description" content="Frequently asked questions about Turocrates.ai digital pathology platform, AI diagnostics, and pathology education tools.">
+    <meta name="keywords" content="digital pathology FAQ, pathology platform FAQ, AI diagnostics FAQ, pathology education FAQ, digital pathology questions">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: var(--heading-color);
+            cursor: pointer;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            padding: 1rem 0;
+            color: var(--text-secondary);
+        }
+        .faq-category {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-accent);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Turocrates.ai Logo" class="logo-image">
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#platform">Platform</a></li>
+                <li><a href="index.html#turoeducate">Education</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+                <li><a href="index.html#early-access">Early Access</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="faq-container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about Turocrates.ai digital pathology platform.</p>
+            
+            <div class="faq-category">
+                <h2>Platform & Technology</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is Turocrates.ai?
+                    </div>
+                    <div class="faq-answer">
+                        Turocrates.ai is a comprehensive digital pathology platform that combines AI-powered diagnostics with whole slide imaging, pathology education tools, and a vendor-neutral platform for pathology workflows.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What digital pathology formats do you support?
+                    </div>
+                    <div class="faq-answer">
+                        Our platform supports all major whole slide image formats including SVS, NDPI, MRXS, SCN, and other standard WSI formats. We're scanner and vendor neutral.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-category">
+                <h2>AI & Diagnostics</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How accurate is your AI for cancer detection?
+                    </div>
+                    <div class="faq-answer">
+                        Our clinical AI suite for breast cancer diagnostics achieves within 5% accuracy compared to expert pathologist ground truth for ER, PR, and KI67 scoring.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I use my existing microscope with your platform?
+                    </div>
+                    <div class="faq-answer">
+                        Yes! Our platform is designed to work with any microscope camera. We provide real-time AI analysis directly through your existing microscope setup.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-category">
+                <h2>Education & Training</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is TuroEducate?
+                    </div>
+                    <div class="faq-answer">
+                        TuroEducate is our comprehensive pathology education platform featuring interactive whole slide images, case studies, quizzes, and collaborative learning tools for pathology education.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-category">
+                <h2>Technical & Integration</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I integrate with my existing systems?
+                    </div>
+                    <div class="faq-answer">
+                        Our platform offers REST APIs, DICOM support, and HL7/FHIR integration for seamless EMR/LIS system integration.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        // Simple FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>

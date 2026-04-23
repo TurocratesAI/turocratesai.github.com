@@ -39,6 +39,10 @@ export const Navigation = () => {
                 Technology
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 group-hover:w-full transition-all duration-300"></span>
               </a>
+              <a href="#turoeducate" className="text-slate-300 hover:text-blue-400 transition-all duration-300 font-medium text-lg relative group">
+                For Education
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 group-hover:w-full transition-all duration-300"></span>
+              </a>
               <a href="#team" className="text-slate-300 hover:text-blue-400 transition-all duration-300 font-medium text-lg relative group">
                 Team
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 group-hover:w-full transition-all duration-300"></span>
@@ -71,6 +75,7 @@ export const Navigation = () => {
             <a href="#problem" className="block px-4 py-3 text-slate-300 hover:text-blue-400 text-lg font-medium">Problem</a>
             <a href="#solution" className="block px-4 py-3 text-slate-300 hover:text-blue-400 text-lg font-medium">Solution</a>
             <a href="#technology" className="block px-4 py-3 text-slate-300 hover:text-blue-400 text-lg font-medium">Technology</a>
+            <a href="#turoeducate" className="block px-4 py-3 text-slate-300 hover:text-blue-400 text-lg font-medium">For Education</a>
             <a href="#team" className="block px-4 py-3 text-slate-300 hover:text-blue-400 text-lg font-medium">Team</a>
             <Button className="mx-4 my-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-0 w-full">
               Get in Touch

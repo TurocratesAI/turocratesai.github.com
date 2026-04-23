@@ -5,6 +5,7 @@ import { Problem } from "@/components/Problem";
 import { Solution } from "@/components/Solution";
 import { Technology } from "@/components/Technology";
 import { Impact } from "@/components/Impact";
+import { TuroEducate } from "@/components/TuroEducate";
 import { Team } from "@/components/Team";
 import { Footer } from "@/components/Footer";
 
@@ -23,6 +24,7 @@ const Index = () => {
         <Solution />
         <Technology />
         <Impact />
+        <TuroEducate />
         <Team />
         <Footer />
       </div>

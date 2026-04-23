@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="HIPAA compliant">
+  <path d="M25 34c10-1 20-5 35-13 15 8 25 12 35 13v28c0 20-14 34-35 44-21-10-35-24-35-44V34z"
+        fill="none" stroke="#2E5E8C" stroke-width="3" stroke-linejoin="round"/>
+  <text x="60" y="64" text-anchor="middle" font-size="17" font-weight="700" fill="#3B2A1E"
+        font-family="Fraunces, Georgia, serif" letter-spacing="0.5">HIPAA</text>
+  <path d="M46 74l10 10 18-20" fill="none" stroke="#2E5E8C" stroke-width="3"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

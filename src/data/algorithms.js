@@ -88,6 +88,19 @@ export const algorithms = [
     output: "Tissue-fold, bubble, out-of-focus, pen-mark flagging",
     organ: "qc",
   },
+  {
+    slug: "cca-idh1",
+    name: "CCA IDH1 mutation prediction",
+    site: "Hepatobiliary",
+    input: "Cholangiocarcinoma H&E",
+    output: "IDH1 mutation status",
+    organ: "gallbladder",
+    snapshot: {
+      type: "pdf",
+      src: "/reports/cca-idh1-sample.pdf",
+      title: "CCA IDH1 — sample case report",
+    },
+  },
 ];
 
 // Ki67 is surfaced on its own below the grid, as the "from the phone" demo.

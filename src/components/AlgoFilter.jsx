@@ -1,11 +1,16 @@
 import { useMemo, useState, useRef, useEffect } from "react";
 import AlgoCard from "./AlgoCard.jsx";
+import SnapshotModal from "./SnapshotModal.jsx";
 
 // Simple site grouping so "Stomach / Colorectal / GI tract" etc. fold into sensible filters.
 const groups = [
   { key: "all", label: "All" },
   { key: "Lung", match: ["Lung"] },
-  { key: "GI", label: "GI & hepatobiliary", match: ["Colorectal", "Stomach", "GI tract", "Gallbladder"] },
+  {
+    key: "GI",
+    label: "GI & hepatobiliary",
+    match: ["Colorectal", "Stomach", "GI tract", "Gallbladder", "Hepatobiliary"],
+  },
   { key: "Gynae", label: "Gynae", match: ["Cervix"] },
   { key: "Skin", match: ["Skin"] },
   { key: "Haem", label: "Haematology", match: ["Blood", "Lymph node"] },
@@ -19,6 +24,7 @@ function inGroup(group, algo) {
 
 export default function AlgoFilter({ algorithms }) {
   const [active, setActive] = useState("all");
+  const [openAlgo, setOpenAlgo] = useState(null);
   const scrollerRef = useRef(null);
 
   const filtered = useMemo(
@@ -84,7 +90,7 @@ export default function AlgoFilter({ algorithms }) {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 auto-rows-fr">
         {filtered.map((a) => (
-          <AlgoCard key={a.slug} algo={a} />
+          <AlgoCard key={a.slug} algo={a} onOpen={setOpenAlgo} />
         ))}
       </div>
 
@@ -93,6 +99,13 @@ export default function AlgoFilter({ algorithms }) {
           Nothing here yet — we're working on it.
         </div>
       )}
+
+      <SnapshotModal
+        open={!!openAlgo}
+        onClose={() => setOpenAlgo(null)}
+        snapshot={openAlgo?.snapshot}
+        algoName={openAlgo?.name}
+      />
     </div>
   );
 }

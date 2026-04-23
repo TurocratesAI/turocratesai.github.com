@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -9,22 +10,27 @@ import {
   Users,
   Library,
   ShieldCheck,
+  Play,
 } from "lucide-react";
 import Section from "../components/ui/Section.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
 import Card from "../components/ui/Card.jsx";
 import Button from "../components/ui/Button.jsx";
+import VideoModal from "../components/VideoModal.jsx";
+
+const DEMO_VIDEO =
+  "https://drive.google.com/file/d/1zh0gHCM2XsDi-CcTifKphhHBwk9LpXbw/preview";
 
 const features = [
   {
     icon: Eye,
     title: "Gigapixel WSI viewer",
-    body: "OpenSeadragon-based deep-zoom viewer tuned for pathology. Fast tile streaming from cloud or on-prem.",
+    body: "Deep-zoom viewer tuned for pathology. Fast tile streaming from cloud or on-prem.",
   },
   {
     icon: Pencil,
     title: "Annotation tools",
-    body: "SAM2-based assistive tools for easier annotations, plus rectangle, ellipse, line, arrow, freehand and point primitives.",
+    body: "AI-assisted tools for easier annotations, plus rectangle, ellipse, line, arrow, freehand and point primitives.",
   },
   {
     icon: BookOpen,
@@ -59,6 +65,8 @@ const features = [
 ];
 
 export default function TuroEducate() {
+  const [videoOpen, setVideoOpen] = useState(false);
+
   return (
     <>
       <section className="bg-sand border-b border-line">
@@ -67,13 +75,16 @@ export default function TuroEducate() {
             TuroEducate.
           </h1>
           <p className="mt-4 text-[17px] md:text-xl text-inkSoft max-w-3xl mx-auto leading-relaxed">
-            An education and research platform for digital pathology. Build cases,
-            annotate slides, teach and assess — and run collaborative research
-            cohorts from the same viewer.
+            An education and research platform for digital pathology. Store slides for
+            CME and slide seminars, add advanced annotations, run assessments. Sharing
+            works exactly like Google Drive.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <Button href="https://turoeducate.turocrates.ai/" external>
-              Open the demo <ArrowUpRight size={18} />
+            <Button onClick={() => setVideoOpen(true)}>
+              <Play size={16} /> Watch the demo
+            </Button>
+            <Button href="https://turoeducate.turocrates.ai/" external variant="outline">
+              Open the live product <ArrowUpRight size={18} />
             </Button>
             <Button to="/contact" variant="outline">
               Talk to us
@@ -81,6 +92,13 @@ export default function TuroEducate() {
           </div>
         </div>
       </section>
+
+      <VideoModal
+        open={videoOpen}
+        onClose={() => setVideoOpen(false)}
+        src={DEMO_VIDEO}
+        title="TuroEducate — product demo"
+      />
 
       <Section tone="paper">
         <SectionHeading

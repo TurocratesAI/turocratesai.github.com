@@ -7,6 +7,7 @@ import TeamTile from "../components/TeamTile.jsx";
 import UpdateCard from "../components/UpdateCard.jsx";
 import ComplianceStrip from "../components/ComplianceStrip.jsx";
 import BackedByStrip from "../components/BackedByStrip.jsx";
+import PartnersGrid from "../components/PartnersGrid.jsx";
 import { coreTeam, advisors } from "../data/team.js";
 import { updates } from "../data/updates.js";
 
@@ -111,8 +112,21 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Backed by + Make in India */}
+      {/* Deployments & partners */}
       <Section tone="paper">
+        <SectionHeading
+          align="center"
+          eyebrow="Deployments & partners"
+          title="Where TuroPath and our algorithms are going live."
+          intro="Validation studies, joint development and research partnerships across leading cancer centres and labs."
+        />
+        <div className="max-w-6xl mx-auto">
+          <PartnersGrid />
+        </div>
+      </Section>
+
+      {/* Backed by + Make in India */}
+      <Section>
         <SectionHeading
           align="center"
           eyebrow="Backed by"

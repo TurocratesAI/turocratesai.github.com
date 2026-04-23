@@ -1,12 +1,19 @@
-import { ArrowRight, ArrowUpRight, Calculator, PlayCircle } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, ArrowUpRight, Calculator, PlayCircle, Play } from "lucide-react";
 import Section from "../components/ui/Section.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
 import Card from "../components/ui/Card.jsx";
 import Button from "../components/ui/Button.jsx";
 import TuroPathFlow from "../components/TuroPathFlow.jsx";
 import TuroCompressFlow from "../components/TuroCompressFlow.jsx";
+import VideoModal from "../components/VideoModal.jsx";
+
+const DEMO_VIDEO =
+  "https://drive.google.com/file/d/1b-oFYWK3DA3z22CtaD-96Cuscv4abFgb/preview";
 
 export default function TuroPath() {
+  const [videoOpen, setVideoOpen] = useState(false);
+
   return (
     <>
       {/* Hero — tight */}
@@ -16,13 +23,16 @@ export default function TuroPath() {
             TuroPath.
           </h1>
           <p className="mt-4 text-[17px] md:text-xl text-inkSoft max-w-3xl mx-auto leading-relaxed">
-            The infrastructure layer for the precision-care lab. Vendor-neutral,
-            scanner-agnostic, HL7- and FHIR-compliant — the entire pathology workflow
-            from specimen receipt to signed report.
+            A lab operating system for digital pathology. Covers the full workflow from
+            patient accession to archival — IMS, synoptic reporting and AI algorithms
+            baked in. Vendor-neutral and scanner-agnostic, so any AI algorithm plugs in.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <Button href="https://reliancelabs.turocrates.ai/" external>
-              Open the demo <ArrowUpRight size={18} />
+            <Button onClick={() => setVideoOpen(true)}>
+              <Play size={16} /> Watch the demo
+            </Button>
+            <Button href="https://reliancelabs.turocrates.ai/" external variant="outline">
+              Open the live product <ArrowUpRight size={18} />
             </Button>
             <Button to="/contact" variant="outline">
               Request a pilot
@@ -30,6 +40,13 @@ export default function TuroPath() {
           </div>
         </div>
       </section>
+
+      <VideoModal
+        open={videoOpen}
+        onClose={() => setVideoOpen(false)}
+        src={DEMO_VIDEO}
+        title="TuroPath — product demo"
+      />
 
       {/* Interactive workflow */}
       <Section tone="paper" density="default">

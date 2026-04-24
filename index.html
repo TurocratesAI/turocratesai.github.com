@@ -50,6 +50,22 @@
         "medicalSpecialty": "Pathology"
     }
     </script>
+
+    <script type="text/javascript">
+      // Decoder for SPA GitHub Pages redirects (see public/404.html).
+      // Runs before React Router reads window.location so the URL is already
+      // rewritten from /?/privacy-policy back to /privacy-policy.
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location));
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -1,0 +1,17 @@
+{
+  "name": "Turocrates.ai",
+  "short_name": "Turocrates",
+  "description": "OS of precision diagnostics. Infrastructure and AI for precision care.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF6EE",
+  "theme_color": "#FBF6EE",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

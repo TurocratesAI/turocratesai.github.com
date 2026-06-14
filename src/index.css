@@ -9,6 +9,30 @@ html {
 body {
   @apply bg-sand text-ink font-sans antialiased;
   font-feature-settings: "ss01", "cv11";
+  /* Atmospheric depth — a faint copper aurora top-right and a cool wash top-left,
+     fixed so the page feels like one continuous obsidian surface. */
+  background-color: #15131A;
+  background-image:
+    radial-gradient(1000px 560px at 88% -8%, rgba(231, 169, 142, 0.10), transparent 60%),
+    radial-gradient(820px 520px at 6% -2%, rgba(143, 183, 225, 0.05), transparent 58%);
+  background-attachment: fixed;
+}
+
+/* Subtle film grain for a tactile, premium feel — never intercepts clicks. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Keep real content above the grain layer. */
+#root {
+  position: relative;
+  z-index: 1;
 }
 
 h1, h2, h3, h4 {
@@ -21,9 +45,9 @@ a {
   @apply transition-colors;
 }
 
-/* keep focus rings readable on sand */
+/* copper focus ring, readable on obsidian */
 :focus-visible {
-  outline: 2px solid #2E5E8C;
+  outline: 2px solid #E7A98E;
   outline-offset: 3px;
   border-radius: 4px;
 }

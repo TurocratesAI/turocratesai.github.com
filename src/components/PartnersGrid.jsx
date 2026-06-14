@@ -7,16 +7,18 @@ export default function PartnersGrid() {
       {partners.map((p) => (
         <Card
           key={p.name}
-          className="p-4 md:p-5 flex flex-col items-center justify-between text-center gap-3 h-full min-h-[150px]"
+          className="p-4 md:p-5 flex flex-col items-center justify-between text-center gap-3 h-full min-h-[150px] transition-colors hover:border-terra/40"
         >
           <div className="flex-1 flex items-center justify-center w-full">
             {p.logo ? (
-              <img
-                src={p.logo}
-                alt={`${p.name} logo`}
-                className="max-h-14 md:max-h-16 w-auto max-w-full object-contain"
-                loading="lazy"
-              />
+              <div className="bg-white rounded-lg p-2.5 flex items-center justify-center w-full">
+                <img
+                  src={p.logo}
+                  alt={`${p.name} logo`}
+                  className="max-h-12 md:max-h-14 w-auto max-w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
             ) : (
               <div className="font-serif text-lg md:text-xl font-semibold leading-tight text-terraDeep">
                 {p.name}

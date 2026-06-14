@@ -17,7 +17,7 @@ export default function AlgoCard({ algo, onOpen }) {
       {...tagProps}
       className={[
         "group relative bg-paper border border-line rounded-2xl p-5 sm:p-6 flex flex-col h-full overflow-hidden text-left",
-        "transition-all duration-300 hover:border-terra/40 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-16px_rgba(59,42,30,0.25)]",
+        "transition-all duration-300 hover:border-terra/40 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_-18px_rgba(0,0,0,0.65)]",
         hasSnapshot ? "cursor-pointer" : "",
       ].join(" ")}
     >

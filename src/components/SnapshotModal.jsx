@@ -23,7 +23,7 @@ export default function SnapshotModal({ open, onClose, snapshot, algoName }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 md:p-8 bg-ink/80 backdrop-blur-sm animate-[fadeIn_.2s_ease-out]"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 md:p-8 bg-black/85 backdrop-blur-sm animate-[fadeIn_.2s_ease-out]"
       role="dialog"
       aria-modal="true"
       aria-label={heading}
@@ -34,7 +34,7 @@ export default function SnapshotModal({ open, onClose, snapshot, algoName }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between gap-3 mb-2 md:mb-3">
-          <div className="text-sand/90 text-sm md:text-base font-medium truncate">
+          <div className="text-ink text-sm md:text-base font-medium truncate">
             {heading}
           </div>
           <div className="flex items-center gap-2 shrink-0">
@@ -42,7 +42,7 @@ export default function SnapshotModal({ open, onClose, snapshot, algoName }) {
               href={src}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-xs md:text-sm text-sand/80 hover:text-sand px-2 py-1 rounded-md border border-sand/20 hover:border-sand/40"
+              className="inline-flex items-center gap-1 text-xs md:text-sm text-inkSoft hover:text-ink px-2 py-1 rounded-md border border-line hover:border-inkSoft/50"
             >
               Open <ArrowUpRight size={14} />
             </a>
@@ -56,18 +56,18 @@ export default function SnapshotModal({ open, onClose, snapshot, algoName }) {
             </button>
           </div>
         </div>
-        <div className="flex-1 rounded-2xl overflow-hidden border border-line shadow-[0_24px_60px_-20px_rgba(0,0,0,0.6)] bg-sand">
+        <div className="flex-1 rounded-2xl overflow-hidden border border-line shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] bg-white">
           {type === "image" ? (
             <img
               src={src}
               alt={heading}
-              className="w-full h-full object-contain bg-sand"
+              className="w-full h-full object-contain bg-white"
             />
           ) : (
             <iframe
               src={`${src}#view=FitH`}
               title={heading}
-              className="w-full h-full bg-sand"
+              className="w-full h-full bg-white"
             />
           )}
         </div>

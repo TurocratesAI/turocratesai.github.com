@@ -160,18 +160,15 @@ export default function TuroPath() {
           <h2 className="font-serif text-3xl md:text-4xl font-semibold">
             Bring TuroPath to your lab.
           </h2>
-          <p className="text-sand/80 mt-3 leading-relaxed">
+          <p className="text-inkSoft mt-3 leading-relaxed">
             We'll walk you through integration, compliance paperwork, and a pilot
             scoped to your volume.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <Button
-              href="mailto:founders@turocrates.ai?subject=TuroPath%20pilot"
-              className="bg-terra text-sand hover:bg-terraDeep"
-            >
+            <Button href="mailto:founders@turocrates.ai?subject=TuroPath%20pilot">
               Request a pilot <ArrowRight size={18} />
             </Button>
-            <Button to="/contact" variant="outline" className="border-sand text-sand hover:bg-sand hover:text-ink">
+            <Button to="/contact" variant="outline">
               Contact us
             </Button>
           </div>

@@ -76,14 +76,14 @@ function CostCurve() {
       </div>
       <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-auto" role="img" aria-label="Cost vs slide volume — two curves, the TuroCompress curve stays flatter as volume grows">
         {/* axes */}
-        <line x1={pad} y1={H - pad} x2={W - pad} y2={H - pad} stroke="#E7DCCB" strokeWidth="1" />
-        <line x1={pad} y1={pad / 2} x2={pad} y2={H - pad} stroke="#E7DCCB" strokeWidth="1" />
+        <line x1={pad} y1={H - pad} x2={W - pad} y2={H - pad} stroke="#3C3744" strokeWidth="1" />
+        <line x1={pad} y1={pad / 2} x2={pad} y2={H - pad} stroke="#3C3744" strokeWidth="1" />
         {/* curves */}
-        <polyline points={withoutPts.join(" ")} fill="none" stroke="#A74E30" strokeWidth="2.25" strokeLinecap="round" />
-        <polyline points={withPts.join(" ")} fill="none" stroke="#4F7A5A" strokeWidth="2.25" strokeLinecap="round" />
+        <polyline points={withoutPts.join(" ")} fill="none" stroke="#F2C2AE" strokeWidth="2.25" strokeLinecap="round" />
+        <polyline points={withPts.join(" ")} fill="none" stroke="#87C29B" strokeWidth="2.25" strokeLinecap="round" />
         {/* axis labels */}
-        <text x={W / 2} y={H - 8} textAnchor="middle" fontSize="11" fill="#5A4436">Slides archived →</text>
-        <text x={12} y={H / 2} textAnchor="middle" fontSize="11" fill="#5A4436" transform={`rotate(-90 12 ${H / 2})`}>Archival cost →</text>
+        <text x={W / 2} y={H - 8} textAnchor="middle" fontSize="11" fill="#ABA5B2">Slides archived →</text>
+        <text x={12} y={H / 2} textAnchor="middle" fontSize="11" fill="#ABA5B2" transform={`rotate(-90 12 ${H / 2})`}>Archival cost →</text>
       </svg>
       <p className="mt-4 text-sm text-inkSoft leading-relaxed">
         Half the bytes, half the archival bill. The gap widens as your volume grows.

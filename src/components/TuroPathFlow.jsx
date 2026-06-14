@@ -84,7 +84,7 @@ function Node({ step, index, active, onActivate }) {
         "group relative w-full text-left bg-paper border rounded-2xl px-4 py-4 md:py-5",
         "shadow-soft transition-all duration-300 ease-out",
         active
-          ? "border-terra/60 -translate-y-0.5 shadow-[0_12px_32px_-16px_rgba(198,107,74,0.5)]"
+          ? "border-terra/60 -translate-y-0.5 shadow-[0_14px_38px_-16px_rgba(231,169,142,0.45)]"
           : "border-line hover:border-terra/30 active:border-terra/40",
       ].join(" ")}
     >
@@ -130,7 +130,7 @@ function Arrow({ direction = "right" }) {
 function BranchPanel({ step }) {
   return (
     <div
-      className="bg-sand border border-terra/25 rounded-2xl p-4 md:p-5 shadow-[0_8px_22px_-14px_rgba(59,42,30,0.3)]"
+      className="bg-obsidian border border-terra/25 rounded-2xl p-4 md:p-5 shadow-[0_10px_28px_-14px_rgba(0,0,0,0.6)]"
       role="region"
       aria-label={`${step.label} integrations`}
     >

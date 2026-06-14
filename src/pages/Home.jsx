@@ -39,8 +39,21 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-sand border-b border-line">
-        <div className="max-w-container mx-auto px-6 md:px-10 pt-16 md:pt-24 pb-20 md:pb-28 text-center">
+      <section className="relative overflow-hidden bg-sand border-b border-line">
+        {/* copper aurora + soft vignette for depth */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage:
+              "radial-gradient(680px 380px at 50% -12%, rgba(231,169,142,0.18), transparent 65%), radial-gradient(520px 360px at 82% 8%, rgba(143,183,225,0.07), transparent 60%)",
+          }}
+        />
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-terra/30 to-transparent" />
+        <div className="relative max-w-container mx-auto px-6 md:px-10 pt-16 md:pt-24 pb-20 md:pb-28 text-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-line bg-paper/60 px-4 py-1.5 text-[11px] uppercase tracking-[0.22em] text-inkSoft font-medium mb-7">
+            <span className="h-1.5 w-1.5 rounded-full bg-terra" /> Precision diagnostics infrastructure
+          </div>
           <h1 className="font-serif text-5xl md:text-7xl font-semibold leading-[1.02] tracking-tight mx-auto max-w-4xl">
             OS of precision diagnostics.
           </h1>
@@ -139,7 +152,7 @@ export default function Home() {
           <img
             src="/logos/make-in-india.png"
             alt="Make in India"
-            className="h-16 w-auto"
+            className="h-16 w-auto invert opacity-85"
             loading="lazy"
           />
           <div className="text-xs uppercase tracking-[0.18em] text-inkSoft/70 font-medium">

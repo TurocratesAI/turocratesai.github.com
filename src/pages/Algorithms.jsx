@@ -99,22 +99,15 @@ export default function Algorithms() {
           <h2 className="font-serif text-3xl md:text-4xl font-semibold">
             Reach out for a demo or PoC.
           </h2>
-          <p className="text-sand/80 mt-3 leading-relaxed">
+          <p className="text-inkSoft mt-3 leading-relaxed">
             We're open to research collaboration too — cohorts, pre-prints and joint
             grants. Tell us what you're working on.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <Button
-              href="mailto:founders@turocrates.ai?subject=Demo%20or%20PoC"
-              className="bg-terra text-sand hover:bg-terraDeep"
-            >
+            <Button href="mailto:founders@turocrates.ai?subject=Demo%20or%20PoC">
               <Mail size={18} /> Email us
             </Button>
-            <Button
-              href="tel:+919622040008"
-              variant="outline"
-              className="border-sand text-sand hover:bg-sand hover:text-ink"
-            >
+            <Button href="tel:+919622040008" variant="outline">
               <Phone size={18} /> Call us
             </Button>
           </div>

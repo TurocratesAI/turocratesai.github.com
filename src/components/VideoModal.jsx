@@ -20,7 +20,7 @@ export default function VideoModal({ open, onClose, src, title }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-ink/80 backdrop-blur-sm animate-[fadeIn_.2s_ease-out]"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-black/85 backdrop-blur-sm animate-[fadeIn_.2s_ease-out]"
       role="dialog"
       aria-modal="true"
       aria-label={title}
@@ -38,7 +38,7 @@ export default function VideoModal({ open, onClose, src, title }) {
         >
           <X size={18} />
         </button>
-        <div className="aspect-video w-full rounded-2xl overflow-hidden border border-line shadow-[0_24px_60px_-20px_rgba(0,0,0,0.6)] bg-ink">
+        <div className="aspect-video w-full rounded-2xl overflow-hidden border border-line shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] bg-obsidian">
           <iframe
             src={src}
             title={title}
@@ -48,7 +48,7 @@ export default function VideoModal({ open, onClose, src, title }) {
           />
         </div>
         {title && (
-          <div className="mt-3 text-center text-xs md:text-sm text-sand/80">
+          <div className="mt-3 text-center text-xs md:text-sm text-inkSoft">
             {title}
           </div>
         )}

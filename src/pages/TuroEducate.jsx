@@ -126,15 +126,15 @@ export default function TuroEducate() {
             <h2 className="font-serif text-3xl md:text-4xl font-semibold">
               See TuroEducate in action.
             </h2>
-            <p className="text-sand/80 mt-3 leading-relaxed">
+            <p className="text-inkSoft mt-3 leading-relaxed">
               Open the live platform, or ask us for an institutional walkthrough.
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-wrap gap-3">
-            <Button href="https://turoeducate.turocrates.ai/" external className="bg-terra text-sand hover:bg-terraDeep">
+            <Button href="https://turoeducate.turocrates.ai/" external>
               Visit TuroEducate <ArrowRight size={18} />
             </Button>
-            <Button to="/contact" variant="outline" className="border-sand text-sand hover:bg-sand hover:text-ink">
+            <Button to="/contact" variant="outline">
               Request a walkthrough
             </Button>
           </div>

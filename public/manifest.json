@@ -4,8 +4,8 @@
   "description": "OS of precision diagnostics. Infrastructure and AI for precision care.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FBF6EE",
-  "theme_color": "#FBF6EE",
+  "background_color": "#15131A",
+  "theme_color": "#15131A",
   "icons": [
     {
       "src": "/favicon.png",

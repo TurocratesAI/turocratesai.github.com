@@ -1,15 +1,12 @@
-export default function Logo({ className = "h-8", inverted = false }) {
+// The new brand wordmark already contains "Turocrates.ai" + the copper rings,
+// rendered light-on-transparent so it sits naturally on the obsidian theme.
+export default function Logo({ className = "h-9" }) {
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
-      <img
-        src="/logos/turocrates-mark.png"
-        alt=""
-        aria-hidden
-        className={`h-full w-auto ${inverted ? "invert" : ""}`}
-      />
-      <span className={`font-serif text-lg font-semibold tracking-tight ${inverted ? "text-sand" : ""}`}>
-        turo<span className={`font-normal ${inverted ? "text-sand/70" : "text-inkSoft"}`}>crates.ai</span>
-      </span>
-    </div>
+    <img
+      src="/logos/turocrates-logo-full.png"
+      alt="Turocrates.ai"
+      className={`${className} w-auto select-none`}
+      draggable={false}
+    />
   );
 }

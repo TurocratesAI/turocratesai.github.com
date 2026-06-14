@@ -2,7 +2,7 @@ import { ArrowUpRight, Newspaper } from "lucide-react";
 
 export default function UpdateCard({ update }) {
   return (
-    <article className="group bg-paper border border-line rounded-2xl overflow-hidden transition-all duration-300 hover:border-terra/40 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-16px_rgba(59,42,30,0.2)] h-full flex flex-col md:flex-row">
+    <article className="group bg-paper border border-line rounded-2xl overflow-hidden transition-all duration-300 hover:border-terra/40 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_-18px_rgba(0,0,0,0.6)] h-full flex flex-col md:flex-row">
       <div className="md:w-2/5 md:shrink-0 aspect-[16/10] md:aspect-auto bg-sand border-b md:border-b-0 md:border-r border-line overflow-hidden flex items-center justify-center">
         {update.image ? (
           <img

@@ -13,10 +13,10 @@ export default function Ki67Diagram() {
       {/* subtle hair-line grid background */}
       <div
         aria-hidden
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        className="absolute inset-0 opacity-[0.06] pointer-events-none"
         style={{
           backgroundImage:
-            "linear-gradient(to right, #3B2A1E 1px, transparent 1px), linear-gradient(to bottom, #3B2A1E 1px, transparent 1px)",
+            "linear-gradient(to right, #ECEAEF 1px, transparent 1px), linear-gradient(to bottom, #ECEAEF 1px, transparent 1px)",
           backgroundSize: "24px 24px",
         }}
       />

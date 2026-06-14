@@ -17,7 +17,7 @@ export default function Nav() {
     <header className="sticky top-0 z-40 bg-sand/90 backdrop-blur border-b border-line">
       <div className="max-w-container mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
         <Link to="/" onClick={() => setOpen(false)} aria-label="Turocrates.ai home">
-          <Logo />
+          <Logo className="h-8 md:h-9" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

@@ -4,9 +4,11 @@ const base =
   "inline-flex items-center gap-2 font-medium text-sm md:text-base rounded-full px-5 py-3 transition-colors";
 
 const variants = {
-  primary: "bg-ink text-sand hover:bg-inkSoft",
-  outline: "border border-ink text-ink hover:bg-ink hover:text-sand",
-  link: "text-sea hover:text-terraDeep underline-offset-4 hover:underline px-0 py-0 rounded-none",
+  primary:
+    "bg-terra text-sand font-semibold shadow-[0_10px_30px_-12px_rgba(231,169,142,0.6)] hover:bg-terraDeep",
+  outline:
+    "border border-inkSoft/45 text-ink hover:border-terra hover:text-terraDeep hover:bg-terra/5",
+  link: "text-terraDeep hover:text-terra underline-offset-4 hover:underline px-0 py-0 rounded-none",
   ghost: "text-ink hover:text-terraDeep px-0 py-0 rounded-none",
 };
 

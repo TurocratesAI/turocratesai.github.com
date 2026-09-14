@@ -112,12 +112,12 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Advisors — centred pair */}
+        {/* Advisors — centred */}
         <div className="mt-10 md:mt-12">
           <div className="text-xs uppercase tracking-[0.18em] text-terra font-medium text-center mb-6">
             Advisors
           </div>
-          <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
+          <div className="grid gap-5 max-w-md mx-auto">
             {advisors.map((m) => (
               <TeamTile key={m.name} member={m} variant="centered" />
             ))}

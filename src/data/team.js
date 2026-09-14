@@ -24,12 +24,6 @@ export const coreTeam = [
 
 export const advisors = [
   {
-    name: "Dr Sanjay Arora",
-    role: "Business Advisor",
-    bio: "Founder, Suburban Diagnostics (acquired by Dr Lal PathLabs). Founder, Shubhan Ventures.",
-    photo: "/team/sanjay.png",
-  },
-  {
     name: "Dr Kshitij Jadhav",
     role: "Research Advisor",
     bio: "Professor, KCDH, IIT Bombay. Ministry of Education, Government of India.",

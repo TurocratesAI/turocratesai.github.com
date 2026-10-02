@@ -55,7 +55,7 @@ export default function Home() {
             <span className="h-1.5 w-1.5 rounded-full bg-terra" /> Precision diagnostics infrastructure
           </div>
           <h1 className="font-serif text-5xl md:text-7xl font-semibold leading-[1.02] tracking-tight mx-auto max-w-4xl">
-            OS of precision diagnostics.
+            OS for precision diagnostics.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-inkSoft leading-relaxed max-w-2xl mx-auto">
             Infrastructure and AI for precision care, built in India for the world.

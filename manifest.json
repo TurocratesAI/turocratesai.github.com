@@ -1,7 +1,7 @@
 {
   "name": "Turocrates.ai",
   "short_name": "Turocrates",
-  "description": "OS of precision diagnostics. Infrastructure and AI for precision care.",
+  "description": "OS for precision diagnostics. Infrastructure and AI for precision care.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#15131A",

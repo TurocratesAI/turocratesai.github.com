@@ -14,10 +14,10 @@ import { updates } from "../data/updates.js";
 const offerings = [
   {
     icon: Microscope,
-    title: "TuroPath",
+    title: "iLIMS",
     blurb:
       "The lab operating system. Open, vendor-neutral, scanner-agnostic — from specimen receipt to signed report.",
-    to: "/turopath",
+    to: "/lims",
   },
   {
     icon: GraduationCap,
@@ -61,8 +61,8 @@ export default function Home() {
             Infrastructure and AI for precision care, built in India for the world.
           </p>
           <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
-            <Button to="/turopath">
-              See TuroPath <ArrowRight size={18} />
+            <Button to="/lims">
+              See iLIMS <ArrowRight size={18} />
             </Button>
             <Button to="/contact" variant="outline">
               Contact us
@@ -130,7 +130,7 @@ export default function Home() {
         <SectionHeading
           align="center"
           eyebrow="Deployments & partners"
-          title="Where TuroPath and our algorithms are going live."
+          title="Where iLIMS and our algorithms are going live."
           intro="Validation studies, joint development and research partnerships across leading cancer centres and labs."
         />
         <div className="max-w-6xl mx-auto">

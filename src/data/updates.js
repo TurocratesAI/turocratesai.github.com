@@ -3,7 +3,7 @@ export const updates = [
     date: "April 2026",
     title: "SiliconIndia Top 10 Healthcare DeepTech — 2026",
     body:
-      "Recognised by SiliconIndia Magazine as one of the Top 10 Healthcare DeepTech Solution Providers, 2026. The feature covers TuroPath — our end-to-end platform for modern histopathology, designed from the ground up around AI.",
+      "Recognised by SiliconIndia Magazine as one of the Top 10 Healthcare DeepTech Solution Providers, 2026. The feature covers iLIMS - our end-to-end platform for modern histopathology, designed from the ground up around AI.",
     image: "/updates/siliconindia-2026.png",
     imageAlt: "SiliconIndia Top 10 Healthcare DeepTech Solution Provider 2026 feature cover",
     cta: { label: "Read the feature", href: "https://lnkd.in/dpGtkuJJ" },

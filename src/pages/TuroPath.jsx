@@ -20,7 +20,7 @@ export default function TuroPath() {
       <section className="bg-sand border-b border-line">
         <div className="max-w-container mx-auto px-6 md:px-10 pt-12 md:pt-20 pb-10 md:pb-14 text-center">
           <h1 className="font-serif text-5xl md:text-6xl font-semibold leading-[1.02] max-w-3xl mx-auto tracking-tight">
-            TuroPath.
+            iLIMS
           </h1>
           <p className="mt-4 text-[17px] md:text-xl text-inkSoft max-w-3xl mx-auto leading-relaxed">
             A lab operating system for digital pathology. Covers the full workflow from
@@ -45,7 +45,7 @@ export default function TuroPath() {
         open={videoOpen}
         onClose={() => setVideoOpen(false)}
         src={DEMO_VIDEO}
-        title="TuroPath — product demo"
+        title="iLIMS - product demo"
       />
 
       {/* Interactive workflow */}
@@ -75,7 +75,7 @@ export default function TuroPath() {
             <p className="text-sm md:text-base text-inkSoft mt-2 leading-relaxed">
               Point your scanner output or existing archive at our endpoint; we return
               .turo files ready to store. Decoder is free for research and bundled
-              with TuroPath.
+              with iLIMS.
             </p>
           </div>
           <Button
@@ -92,7 +92,7 @@ export default function TuroPath() {
       <Section tone="paper" density="tight">
         <SectionHeading
           align="center"
-          eyebrow="Try TuroPath for yourself"
+          eyebrow="Try iLIMS for yourself"
           title="See it, or size it."
         />
         <div className="grid md:grid-cols-2 gap-4 md:gap-5 max-w-4xl mx-auto">
@@ -110,8 +110,8 @@ export default function TuroPath() {
                 Walk through a real deployment.
               </h3>
               <p className="text-sm text-inkSoft mt-2 leading-relaxed">
-                A working TuroPath environment — synoptic reporting, digital slides, AI
-                read-backs — open in your browser.
+                A working iLIMS environment - synoptic reporting, digital slides, AI
+                read-backs - open in your browser.
               </p>
             </div>
             <Button
@@ -138,7 +138,7 @@ export default function TuroPath() {
                 Calculate ROI for your lab.
               </h3>
               <p className="text-sm text-inkSoft mt-2 leading-relaxed">
-                Maps TuroPath to savings in courier, IHC, OR time and archival — tailored
+                Maps iLIMS to savings in courier, IHC, OR time and archival - tailored
                 to your volume.
               </p>
             </div>
@@ -158,14 +158,14 @@ export default function TuroPath() {
       <Section tone="ink" density="tight">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold">
-            Bring TuroPath to your lab.
+            Bring iLIMS to your lab.
           </h2>
           <p className="text-inkSoft mt-3 leading-relaxed">
             We'll walk you through integration, compliance paperwork, and a pilot
             scoped to your volume.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <Button href="mailto:founders@turocrates.ai?subject=TuroPath%20pilot">
+            <Button href="mailto:founders@turocrates.ai?subject=iLIMS%20pilot">
               Request a pilot <ArrowRight size={18} />
             </Button>
             <Button to="/contact" variant="outline">

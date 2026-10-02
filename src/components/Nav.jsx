@@ -5,7 +5,7 @@ import Logo from "./Logo.jsx";
 
 const links = [
   { to: "/", label: "About", end: true },
-  { to: "/turopath", label: "TuroPath" },
+  { to: "/lims", label: "iLIMS" },
   { to: "/pathreed", label: "PathReed" },
   { to: "/algorithms", label: "AI" },
   { to: "/contact", label: "Contact" },

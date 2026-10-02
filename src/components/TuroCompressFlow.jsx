@@ -128,7 +128,7 @@ export default function TuroCompressFlow() {
               <Box
                 icon={Eye}
                 title="Viewer & AI decoder"
-                sub="Same .turo file — no conversion step. Decoder is free for research and bundled with TuroPath."
+                sub="Same .turo file — no conversion step. Decoder is free for research and bundled with iLIMS."
               />
             </div>
           </div>

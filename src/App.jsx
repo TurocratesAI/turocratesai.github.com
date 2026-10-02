@@ -19,7 +19,7 @@ export default function App() {
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/turopath" element={<TuroPath />} />
+            <Route path="/lims" element={<TuroPath />} />
             <Route path="/pathreed" element={<TuroEducate />} />
             <Route path="/algorithms" element={<Algorithms />} />
             <Route path="/contact" element={<Contact />} />

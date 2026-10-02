@@ -182,7 +182,7 @@ export default function TuroPathFlow() {
 
   return (
     <div
-      aria-label="TuroPath workflow — tap or hover each step to see its integrations"
+      aria-label="iLIMS workflow - tap or hover each step to see its integrations"
       onMouseEnter={() => setAutoplay(false)}
       onTouchStart={() => setAutoplay(false)}
       className="relative"

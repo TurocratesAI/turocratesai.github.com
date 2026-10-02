@@ -73,7 +73,7 @@ export default function TuroEducate() {
       <section className="bg-sand border-b border-line">
         <div className="max-w-container mx-auto px-6 md:px-10 pt-12 md:pt-20 pb-10 md:pb-14 text-center">
           <h1 className="font-serif text-5xl md:text-6xl font-semibold leading-[1.02] max-w-3xl mx-auto tracking-tight">
-            PathReed.
+            PathReed
           </h1>
           <p className="mt-4 text-[17px] md:text-xl text-inkSoft max-w-3xl mx-auto leading-relaxed">
             An education and research platform for digital pathology. Store slides for

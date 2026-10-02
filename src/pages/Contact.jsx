@@ -17,7 +17,7 @@ export default function Contact() {
             Contact.
           </h1>
           <p className="mt-5 text-lg md:text-xl text-inkSoft max-w-2xl mx-auto leading-relaxed">
-            Pilots, PoCs, research collaborations, press — we reply to everything.
+            Pilots, PoCs, research collaborations, press - we reply to everything.
           </p>
         </div>
       </section>

@@ -21,10 +21,10 @@ const offerings = [
   },
   {
     icon: GraduationCap,
-    title: "TuroEducate",
+    title: "PathReed",
     blurb:
       "A digital pathology teaching platform for institutions and individual pathologists.",
-    to: "/turoeducate",
+    to: "/pathreed",
   },
   {
     icon: Brain,

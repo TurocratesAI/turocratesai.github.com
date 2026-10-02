@@ -20,7 +20,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/turopath" element={<TuroPath />} />
-            <Route path="/turoeducate" element={<TuroEducate />} />
+            <Route path="/pathreed" element={<TuroEducate />} />
             <Route path="/algorithms" element={<Algorithms />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />

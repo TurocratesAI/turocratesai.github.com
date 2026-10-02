@@ -19,8 +19,9 @@ import Button from "../components/ui/Button.jsx";
 import VideoModal from "../components/VideoModal.jsx";
 
 const DEMO_VIDEO =
-  "https://drive.google.com/file/d/1zh0gHCM2XsDi-CcTifKphhHBwk9LpXbw/preview";
+  "https://drive.google.com/file/d/17YuOkkg8dKmQJRvN4J_PWcL_M7OsJU8O/preview";
 
+  //https://drive.google.com/file/d/1zh0gHCM2XsDi-CcTifKphhHBwk9LpXbw/preview
 const features = [
   {
     icon: Eye,
@@ -72,7 +73,7 @@ export default function TuroEducate() {
       <section className="bg-sand border-b border-line">
         <div className="max-w-container mx-auto px-6 md:px-10 pt-12 md:pt-20 pb-10 md:pb-14 text-center">
           <h1 className="font-serif text-5xl md:text-6xl font-semibold leading-[1.02] max-w-3xl mx-auto tracking-tight">
-            TuroEducate.
+            PathReed.
           </h1>
           <p className="mt-4 text-[17px] md:text-xl text-inkSoft max-w-3xl mx-auto leading-relaxed">
             An education and research platform for digital pathology. Store slides for
@@ -83,7 +84,7 @@ export default function TuroEducate() {
             <Button onClick={() => setVideoOpen(true)}>
               <Play size={16} /> Watch the demo
             </Button>
-            <Button href="https://turoeducate.turocrates.ai/" external variant="outline">
+            <Button href="https://pathreed.turocrates.ai/" external variant="outline">
               Open the live product <ArrowUpRight size={18} />
             </Button>
             <Button to="/contact" variant="outline">
@@ -97,7 +98,7 @@ export default function TuroEducate() {
         open={videoOpen}
         onClose={() => setVideoOpen(false)}
         src={DEMO_VIDEO}
-        title="TuroEducate — product demo"
+        title="PathReed - product demo"
       />
 
       <Section tone="paper">
@@ -124,15 +125,15 @@ export default function TuroEducate() {
         <div className="md:flex md:items-center md:justify-between gap-8">
           <div className="max-w-2xl">
             <h2 className="font-serif text-3xl md:text-4xl font-semibold">
-              See TuroEducate in action.
+              See PathReed in action.
             </h2>
             <p className="text-inkSoft mt-3 leading-relaxed">
               Open the live platform, or ask us for an institutional walkthrough.
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-wrap gap-3">
-            <Button href="https://turoeducate.turocrates.ai/" external>
-              Visit TuroEducate <ArrowRight size={18} />
+            <Button href="https://pathreed.turocrates.ai/" external>
+              Visit PathReed <ArrowRight size={18} />
             </Button>
             <Button to="/contact" variant="outline">
               Request a walkthrough
